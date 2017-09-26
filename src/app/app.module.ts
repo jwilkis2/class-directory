@@ -4,17 +4,20 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { DictionaryService } from './DictionaryService';
+import { PersonComponent } from './person/person.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PersonComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [DictionaryService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

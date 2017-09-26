@@ -1,3 +1,15 @@
-<h1>
-  {{title}}
-</h1>
+<form>
+  <h3>Class Directory</h3>  
+  <div>
+    <label for="name">Input Name:</label>
+    <input type="text" name="name" placeholder="Enter First and Last Name" #newName>
+    <button (click)="searchDictionary(newName)">Submit</button>
+  </div>
+  <div>{{this.email || ''}}</div> <!-- List Email here -->
+  <br>
+  <br>
+  <div> <!-- List Names here -->
+    <app-person *ngFor="let person of sortedPersons()" [person]="person">
+    </app-person>  
+  </div> 
+</form>
